@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
+<title>DevOps Training</title>
+<link href="https://t3.ftcdn.net/jpg/02/60/42/82/360_F_260428264_7nU3AJOgVxMb3f2e3yMJo9OF0BVD9hB6.jpg" rel="icon">
 </head>
 </head>
 <body>
