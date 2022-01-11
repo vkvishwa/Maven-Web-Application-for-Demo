@@ -16,11 +16,7 @@ pipeline {
         bat "mvn package"
       }
     }
-    stage("sonarqube stage"){
-       steps {
-         bat "mvn package sonar:sonar"
-       }
-    }
+    
     stage("Building image"){
       steps {
         bat "docker build -t vishwavk2021/docker:latest ."
