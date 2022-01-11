@@ -21,12 +21,7 @@ pipeline {
         sh "mvn package"
       }
     }
-//     stage("sonarqube stage"){
-//        steps {
-//          sh "mvn package sonar:sonar"
-//        }
-//     }
-   stages {
+
   stage('Building image') {
     steps{
       script {
@@ -34,5 +29,5 @@ pipeline {
       }
     }
   }
-}
+  }
 }
