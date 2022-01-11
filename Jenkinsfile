@@ -26,7 +26,8 @@ pipeline {
   stage('Building our image') {
     steps{
      script {
-      sudo 'docker build -t vishwavk2021/docker:1'
+      sudo 'docker build -t vishwavk2021/docker:1 .'
+       sudo 'docker push vishwavk2021/docker:1'
      }
    }
   }
