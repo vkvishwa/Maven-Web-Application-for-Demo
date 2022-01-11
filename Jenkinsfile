@@ -3,8 +3,8 @@ pipeline {
   environment {
     registry = "vishwavk2021/docker"
     registryCredential = 'Bri!!Iouser2021'
+    dockerImage = ''
   }
-  dockerImage = ''
   
   agent any
   stages {
