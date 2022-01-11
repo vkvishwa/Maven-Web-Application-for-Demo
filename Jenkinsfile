@@ -1,4 +1,9 @@
 pipeline {
+  
+  environment {
+    registry = "docker_hub_account/repository_name"
+    registryCredential = 'dockerhub'
+}
   agent any
   stages {
      stage("Cleaning Stage") {
@@ -21,10 +26,15 @@ pipeline {
 //          sh "mvn package sonar:sonar"
 //        }
 //     }
-    stage("Building image"){
-      steps {
-        sh "docker build -t vishwavk2021/docker:latest ."
+   stages {
+  stage('Building image') {
+    steps{
+      script {
+        docker.build registry + ":$BUILD_NUMBER"
       }
+    }
+  }
+}
     }
   }
 }
