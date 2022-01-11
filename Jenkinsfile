@@ -1,8 +1,8 @@
 pipeline {
   
   environment {
-    registry = "docker_hub_account/repository_name"
-    registryCredential = 'dockerhub'
+    registry = "vishwavk2021/docker"
+    registryCredential = 'Bri!!Iouser2021'
 }
   agent any
   stages {
