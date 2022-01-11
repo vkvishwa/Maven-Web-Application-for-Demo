@@ -26,7 +26,7 @@ pipeline {
   stage('Building our image') {
     steps{
      script {
-      sudo dockerImage = docker.build registry + ":$BUILD_NUMBER"
+      sudo 'docker build -t vishwavk2021/docker:1'
      }
    }
   }
