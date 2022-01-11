@@ -30,5 +30,13 @@ pipeline {
      }
    }
   }
+    stage('image pull') {
+    steps{
+     script {
+      sudo 'docker run -d -p 8080:8080 --name mavenwebapp vishwavk2021/docker:1'
+     }
+   }
+  }
+    
  }
 }
