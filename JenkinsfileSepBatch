@@ -38,14 +38,7 @@ sshagent(['dd147e39-1f55-4554-9700-b10dc494211f']) {
 }
 }
 
-stage('SendEmailNotification'){
 
-mail bcc: '', body: '''Build Over..
-
-Regards,
-Mithun Software Solutions,
-9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build over!...', to: 'devopstrainingblr@gmail.com'
-}
 
 */
 
