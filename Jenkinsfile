@@ -2,7 +2,7 @@ pipeline {
   
   environment {
     registry = "vishwavk2021/docker"
-    registryCredential = 'Bri!!Iouser2021'
+    registryCredential = 'Bri!!iouser2021'
     dockerImage = ''
   }
   
