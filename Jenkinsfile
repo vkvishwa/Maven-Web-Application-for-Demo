@@ -3,7 +3,9 @@ pipeline {
   environment {
     registry = "vishwavk2021/docker"
     registryCredential = 'Bri!!Iouser2021'
-}
+  }
+  dockerImage = ''
+  
   agent any
   stages {
      stage("Cleaning Stage") {
@@ -21,13 +23,12 @@ pipeline {
         sh "mvn package"
       }
     }
-
-  stage('Building image') {
+  stage('Building our image') {
     steps{
-      script {
-        docker.build registry + ":$BUILD_NUMBER"
-      }
-    }
+     script {
+      dockerImage = docker.build registry + ":$BUILD_NUMBER"
+     }
+   }
   }
-  }
+ }
 }
