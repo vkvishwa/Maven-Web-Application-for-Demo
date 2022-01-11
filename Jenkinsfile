@@ -3,27 +3,27 @@ pipeline {
   stages {
      stage("Cleaning Stage") {
       steps {
-        bat "mvn clean"
+        sh "mvn clean"
       }
     }
     stage("Testing stage") {
       steps {
-        bat "mvn test"
+        sh "mvn test"
       }
     }
     stage("Packaging stage") {
       steps {
-        bat "mvn package"
+        sh "mvn package"
       }
     }
     stage("sonarqube stage"){
        steps {
-         bat "mvn package sonar:sonar"
+         sh "mvn package sonar:sonar"
        }
     }
     stage("Building image"){
       steps {
-        bat "docker build -t vishwavk2021/docker:latest ."
+        sh "docker build -t vishwavk2021/docker:latest ."
       }
     }
   }
