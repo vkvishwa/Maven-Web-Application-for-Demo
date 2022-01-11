@@ -16,11 +16,11 @@ pipeline {
         sh "mvn package"
       }
     }
-    stage("sonarqube stage"){
-       steps {
-         sh "mvn package sonar:sonar"
-       }
-    }
+//     stage("sonarqube stage"){
+//        steps {
+//          sh "mvn package sonar:sonar"
+//        }
+//     }
     stage("Building image"){
       steps {
         sh "docker build -t vishwavk2021/docker:latest ."
