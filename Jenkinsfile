@@ -7,7 +7,7 @@ pipeline {
 
 	stage('Docker_image_build') {
             steps {
-                sh "usemod -aG docker ubuntu" 
+                sh "sudo usemod -aG docker ubuntu" 
                 sh "docker build -t vishwavk2021/docker:$tagnumber ."
             }
         }
