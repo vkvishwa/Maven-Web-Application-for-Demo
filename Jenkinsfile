@@ -7,8 +7,6 @@ pipeline {
 
 	stage('Docker_image_build') {
             steps {
-		
-                sh "sudo su -" 
                 sh "docker build -t vishwavk2021/docker:$tagnumber ."
             }
         }
